@@ -1,7 +1,7 @@
 
-export class Scene1 extends Phaser.Scene {
+export class IntroScene extends Phaser.Scene {
     constructor() {
-        super('preloader');
+        super('intro');
     }
 
     preload() {
@@ -9,11 +9,7 @@ export class Scene1 extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start('main');
-    }
-
-    loadAtlas() {
-
+        
     }
 
 }

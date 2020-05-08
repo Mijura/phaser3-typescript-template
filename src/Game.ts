@@ -1,5 +1,5 @@
 import "phaser";
-import { Scene1 } from './scenes/Scene1';
+import { IntroScene } from './scenes/Scene1';
 
 var width = window.screen.availWidth - (window.outerWidth - window.innerWidth);
 var height = window.screen.availHeight - (window.outerHeight - window.innerHeight);
@@ -18,7 +18,7 @@ const config = {
     dom: {
         createContainer: true
     },
-    scene: [Scene1]
+    scene: [IntroScene]
 };
 
 const game = new Phaser.Game(config);
