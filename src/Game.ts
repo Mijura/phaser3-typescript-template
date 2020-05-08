@@ -1,16 +1,24 @@
 import "phaser";
-import { Preloader } from './scenes/Preloader';
-import { Main } from './scenes/Main';
-    
-const config: GameConfig = {
+import { Scene1 } from './scenes/Scene1';
+
+var width = window.screen.availWidth - (window.outerWidth - window.innerWidth);
+var height = window.screen.availHeight - (window.outerHeight - window.innerHeight);
+
+const config = {
     type: Phaser.AUTO,
-    parent: "canvas",
-    width: 960,
-    height: 540,
-    scene: [
-        Preloader,
-        Main
-    ]
+    width: width,
+    height: height,
+    scale: {
+        mode: Phaser.Scale.RESIZE,
+        parent: 'phaser-example',
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: width,
+        height: height
+    },
+    dom: {
+        createContainer: true
+    },
+    scene: [Scene1]
 };
 
 const game = new Phaser.Game(config);
