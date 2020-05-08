@@ -1,4 +1,3 @@
-import { config } from '../config/preload';
 
 export class Scene1 extends Phaser.Scene {
     constructor() {
